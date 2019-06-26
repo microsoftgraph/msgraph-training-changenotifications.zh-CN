@@ -1,10 +1,10 @@
 <!-- markdownlint-disable MD002 MD041 -->
 
-为了使 Microsoft Graph 向您的开发计算机上运行的应用程序发送通知, 您需要使用 ngrok 之类的工具从 internet 到您的计算机的隧道调用。 Ngrok 允许将来自 internet 的呼叫定向到本地运行的应用程序, 而无需创建防火墙规则。
+为了使 Microsoft Graph 向您的开发计算机上运行的应用程序发送通知, 您需要使用 ngrok 之类的工具从 internet 向您的开发计算机进行隧道调用。 Ngrok 允许将来自 internet 的呼叫定向到本地运行的应用程序, 而无需创建防火墙规则。
 
 在继续操作之前, 您应在开发计算机上安装[ngrok](https://ngrok.com) 。 如果您没有 ngrok, 请访问 "下载选项" 和 "说明" 的 "上一步" 链接。
 
-安装后, 运行 ngrok。
+通过从命令行执行以下命令来运行 ngrok:
 
 ```shell
 ngrok http 5000
@@ -21,7 +21,7 @@ ngrok http 5000
 ngrok by @inconshreveable
 
 Session Status                online
-Account                       Basic
+Account                       ???? ???? (Plan: Free)
 Version                       2.3.15
 Region                        United States (us)
 Web Interface                 http://127.0.0.1:4040

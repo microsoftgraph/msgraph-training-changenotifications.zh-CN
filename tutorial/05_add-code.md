@@ -10,7 +10,9 @@
 
 应用程序使用多个新的模型类从 Microsoft Graph 将邮件序列化到 (de)。
 
-在项目文件树中右键单击, 然后选择 "**新建文件夹**"。 命名 it**模型**右键单击 "**模型**" 文件夹, 并添加三个新文件:
+在项目文件树中右键单击, 然后选择 "**新建文件夹**"。 命名 it**模型**
+
+右键单击 "**模型**" 文件夹并添加三个新文件:
 
 - **Notification.cs**
 - **ResourceData.cs**
@@ -103,7 +105,7 @@ namespace msgraphapp
 }
 ```
 
-打开**Startup.cs**文件, 并将内容替换为以下内容。
+打开**Startup.cs**文件。 找到方法`ConfigureServices()`方法 & 将其替换为以下代码:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -136,9 +138,9 @@ public void ConfigureServices(IServiceCollection services)
 
 将以下变量替换为先前复制的值:
 
-    - `<NGROK URL>`应设置为先前复制的 https ngrok url。
-    - `<TENANT ID>`例如, 应为您的 Office 365 租户 id。 **contoso.onmicrosoft.com**。
-    - `<APP ID>`, `<APP SECRET>`它应是您在创建应用程序注册时之前复制的应用程序 id 和密码。
+- `<NGROK URL>`应设置为先前复制的 https ngrok url。
+- `<TENANT ID>`应为您的 Office 365 租户 id, 例如: **contoso.onmicrosoft.com**。
+- `<APP ID>`, `<APP SECRET>`它应是您在创建应用程序注册时之前复制的应用程序 id 和密码。
 
 ### <a name="add-notification-controller"></a>添加通知控制器
 
@@ -146,7 +148,7 @@ public void ConfigureServices(IServiceCollection services)
 
 右键单击该`Controllers`文件夹, 选择 "**新建文件**", 然后将控制器命名为 " **NotificationsController.cs**"。
 
-将**NotificationController.cs**的内容替换为以下内容:
+将**NotificationController.cs**的内容替换为以下代码:
 
 ```csharp
 using System;
@@ -244,23 +246,19 @@ namespace msgraphapp.Controllers
 
     private async Task<string> GetAccessToken()
     {
-        ClientCredential clientCredentials = new ClientCredential(secret: config.AppSecret);
+      IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(config.AppId)
+        .WithClientSecret(config.AppSecret)
+        .WithAuthority($"https://login.microsoftonline.com/{config.TenantId}")
+        .WithRedirectUri("https://daemon")
+        .Build();
 
-        var app = new ConfidentialClientApplication(
-            clientId: config.AppId,
-            authority: $"https://login.microsoftonline.com/{config.TenantId}",
-            redirectUri: "https://daemon",
-            clientCredential: clientCredentials,
-            userTokenCache: null,
-            appTokenCache: new TokenCache()
-        );
+      string[] scopes = new string[] { "https://graph.microsoft.com/.default" };
 
-        string[] scopes = new string[] { "https://graph.microsoft.com/.default" };
+      var result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
 
-        var result = await app.AcquireTokenForClientAsync(scopes);
-
-        return result.AccessToken;
+      return result.AccessToken;
     }
+
   }
 }
 ```

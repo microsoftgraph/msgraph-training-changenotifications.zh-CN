@@ -16,7 +16,7 @@
 
 ## <a name="prerequisites"></a>先决条件
 
-在开始本教程之前, 您应在开发计算机上安装[.Net Core 2.2 SDK](https://dotnet.microsoft.com/download)和[Visual Studio 代码](https://code.visualstudio.com/)。 如果没有安装它们, 请访问以前的链接获取下载选项。
+在开始本教程之前, 您应在开发计算机上安装[.Net Core 2.2 SDK](https://dotnet.microsoft.com/download)和[Visual Studio 代码](https://code.visualstudio.com/)。 
 
 ## <a name="completed-exercises"></a>完成练习
 

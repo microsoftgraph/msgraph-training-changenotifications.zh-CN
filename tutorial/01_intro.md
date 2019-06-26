@@ -7,10 +7,20 @@
 
 ## <a name="prerequisites"></a>先决条件
 
-在开始本教程之前, 您应在开发计算机上安装[.Net Core 2.2 SDK](https://dotnet.microsoft.com/download)和[Visual Studio 代码](https://code.visualstudio.com/)。 如果没有安装它们, 请访问以前的链接获取下载选项。
+在开始本教程之前, 您应在开发计算机上安装[.Net Core 2.2 SDK](https://dotnet.microsoft.com/download)和[Visual Studio 代码](https://code.visualstudio.com/)。
 
 > [!NOTE]
 > 本教程是使用 .NET Core 版本2.2 编写的。 本指南中的步骤可能适用于其他版本, 但尚未经过测试。
+
+## <a name="watch-the-tutorial"></a>观看教程
+
+此模块已记录, 在 Office 开发 YouTube 频道中可用。
+
+<!-- markdownlint-disable MD033 MD034 -->
+<br/>
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/fThiCZmIcMQ]
+<!-- markdownlint-enable MD033 MD034 -->
 
 ## <a name="feedback"></a>反馈
 

@@ -16,21 +16,23 @@
 
 ## <a name="watch-the-module"></a>观看模块
 
-此模块已记录并在 Office 开发 YouTube 频道中可用:[更改通知并使用 Microsoft Graph 跟踪更改](https://youtu.be/MvJ15BHTdHA)
+此模块已记录并在 Office 开发 YouTube 频道中可用:[更改通知并使用 Microsoft Graph 跟踪更改](https://youtu.be/fThiCZmIcMQ)
 
 ## <a name="contributors"></a>参与者
 
-| 角色                | 作者 (s)                                               |
-| -------------------- | ------------------------------------------------------- |
-| 实验室手册/幻灯片 | Andrew Connell (Microsoft MVP, Voitanos) @andrewconnell |
-| 承办人/支持    | Jeremy Thake (Microsoft) @jthake                        |
+|        角色         |                                       作者 (s)                                       |
+| -------------------- | ------------------------------------------------------------------------------------- |
+| 实验室手册/幻灯片 | Andrew Connell (Microsoft MVP, Voitanos) [@andrewconnell](//github.com/andrewconnell) |
+| 承办人/支持    | Jeremy Thake (Microsoft) [@jthake](//github.com/jthake)                               |
 
 ## <a name="version-history"></a>版本历史记录
 
-| 版本 | 日期           | 注释             |
-| ------- | -------------- | -------------------- |
-| 1.1     | 2019 年 4 月 9 日 | 添加了截屏视频链接 |
-| 1.0     | 2019 年 3 月 14 日 | 新模块已提交 |
+| 版本 |      日期      |                     注释                     |
+| ------- | -------------- | ------------------------------------------------ |
+| 1.3     | 2019年6月18日  | 更新了用于刷新截屏视频录制的自述文件 |
+| 1.2     | 5月30日, 2019   | Fy2019Q4 内容刷新                         |
+| 1.1     | 2019 年 4 月 9 日  | 添加了截屏视频链接                            |
+| 1.0     | 2019 年 3 月 14 日 | 新模块已提交                             |
 
 ## <a name="disclaimer"></a>免责声明
 
